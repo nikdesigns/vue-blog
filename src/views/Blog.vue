@@ -22,7 +22,13 @@
         <div
           class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none"
         >
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <!-- 1st post starts -->
+
+          <div
+            class="flex flex-col rounded-lg shadow-lg overflow-hidden"
+            v-for="post in posts"
+            :key="post.id"
+          >
             <div class="flex-shrink-0">
               <img
                 class="h-48 w-full object-cover"
@@ -34,24 +40,22 @@
               <div class="flex-1">
                 <p class="text-sm font-medium text-indigo-600">
                   <a href="#" class="hover:underline">
-                    Article
+                    {{ post.category }}
                   </a>
                 </p>
                 <a href="#" class="block mt-2">
                   <p class="text-xl font-semibold text-gray-900">
-                    Boost your conversion rate
+                    {{ post.title }}
                   </p>
                   <p class="mt-3 text-base text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto accusantium praesentium eius, ut atque fuga
-                    culpa, similique sequi cum eos quis dolorum.
+                    {{ post.desc }}
                   </p>
                 </a>
               </div>
               <div class="mt-6 flex items-center">
                 <div class="flex-shrink-0">
                   <a href="#">
-                    <span class="sr-only">Roel Aufderehar</span>
+                    <span class="sr-only"> {{ post.author }} </span>
                     <img
                       class="h-10 w-10 rounded-full"
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
@@ -62,18 +66,18 @@
                 <div class="ml-3">
                   <p class="text-sm font-medium text-gray-900">
                     <a href="#" class="hover:underline">
-                      Roel Aufderehar
+                      {{ post.author }}
                     </a>
                   </p>
                   <div class="flex space-x-1 text-sm text-gray-500">
                     <time datetime="2020-03-16">
-                      Mar 16, 2020
+                      {{ post.date.toDate().toDateString() }}
                     </time>
                     <span aria-hidden="true">
                       ·
                     </span>
                     <span>
-                      6 min read
+                      {{ post.read_time }}
                     </span>
                   </div>
                 </div>
@@ -81,7 +85,9 @@
             </div>
           </div>
 
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <!-- 1st post ends -->
+
+          <!-- <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div class="flex-shrink-0">
               <img
                 class="h-48 w-full object-cover"
@@ -139,9 +145,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+          <!-- <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div class="flex-shrink-0">
               <img
                 class="h-48 w-full object-cover"
@@ -199,7 +205,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -210,12 +216,31 @@
 <script>
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
+import db from '../firebase/init';
 
 export default {
   name: 'Blog',
+  data() {
+    return {
+      posts: [],
+    };
+  },
   components: {
     Header,
     Footer,
+  },
+  created() {
+    // fetch data from firestore
+    db.collection('posts')
+      .get()
+      .then((snapshot) => {
+        snapshot.forEach((doc) => {
+          console.log(doc.data(), doc.id);
+          let post = doc.data();
+          post.id = doc.id;
+          this.posts.push(post);
+        });
+      });
   },
 };
 </script>

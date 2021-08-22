@@ -1,11 +1,6 @@
 <template>
   <div>
-    <div
-      class="relative bg-white"
-      x-data="Components.popover({ open: true, focus: true })"
-      x-init="init()"
-      @keydown.escape="onEscape"
-    >
+    <div class="relative bg-white">
       <div
         class="absolute inset-0 shadow z-30 pointer-events-none"
         aria-hidden="true"
@@ -53,8 +48,6 @@
                 focus:outline-none
                 focus:ring-2 focus:ring-inset focus:ring-indigo-500
               "
-              @click="toggle"
-              @mousedown="if (open) $event.preventDefault();"
               aria-expanded="false"
             >
               <span class="sr-only">Open menu</span>
@@ -84,11 +77,7 @@
               x-data="Components.popoverGroup()"
               x-init="init()"
             >
-              <div
-                x-data="Components.popover({ open: true, focus: false })"
-                x-init="init()"
-                @keydown.escape="onEscape"
-              >
+              <div>
                 <button
                   type="button"
                   x-state:on="Item active"
@@ -107,8 +96,6 @@
                     focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                   "
                   :class="{ 'text-gray-900': open, 'text-gray-500': !open }"
-                  @click="toggle"
-                  @mousedown="if (open) $event.preventDefault();"
                   aria-expanded="false"
                 >
                   <span>Solutions</span>
@@ -140,7 +127,6 @@
                   leave-to-class="opacity-0 -translate-y-1"
                   ><div
                     v-if="open"
-                    x-description="'Solutions' flyout menu, show/hide based on flyout menu state."
                     class="
                       hidden
                       md:block
@@ -631,11 +617,7 @@
               >
                 Blog
               </router-link>
-              <div
-                x-data="Components.popover({ open: false, focus: false })"
-                x-init="init()"
-                @keydown.escape="onEscape"
-              >
+              <div @keydown.escape="onEscape">
                 <button
                   type="button"
                   x-state:on="Item active"
@@ -1628,4 +1610,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+a.router-link-exact-active {
+  border-bottom-width: 2px;
+  border-color: #6366f1;
+  /* border-block-end: thick double #32a1ce; */
+}
+</style>

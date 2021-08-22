@@ -18,7 +18,7 @@
             <h3
               class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
             >
-              Meet Whitney
+              {{ postTitle }}
             </h3>
           </div>
         </div>
@@ -156,6 +156,11 @@ import Footer from '../components/Footer.vue';
 
 export default {
   name: 'ViewPost',
+  data() {
+    return {
+      postTitle: this.$route.params.post_name,
+    };
+  },
   components: {
     Header,
     Footer,
