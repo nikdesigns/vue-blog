@@ -7,19 +7,9 @@
       >
         <div class="mx-auto w-full max-w-sm lg:w-96">
           <div>
-            <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+            <h2 class="mt-6 text-3xl font-light text-gray-900">
               Sign in to your account
             </h2>
-            <p class="mt-2 text-sm text-gray-600 max-w">
-              Or
-              <!-- space -->
-              <a
-                href="#"
-                class="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                start your 14-day free trial
-              </a>
-            </p>
           </div>
 
           <div class="mt-8">
@@ -179,8 +169,8 @@
       </div>
       <div class="hidden lg:block relative w-0 flex-1">
         <img
-          class="absolute inset-0 h-auto w-full object-cover"
-          src="../assets/undraw_motherhood_7htu.svg"
+          class="absolute inset-0 h-full w-full object-contain"
+          src="../assets/undraw_connected_world_wuay.svg"
           alt=""
         />
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-32">
+  <div class="pb-20">
     <main class="lg:relative">
       <div
         class="mx-auto max-h-screen max-w-7xl w-full pt-16 pb-20 text-center lg:py-32 lg:text-left"
@@ -42,11 +42,11 @@
         </div>
       </div>
       <div
-        class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
+        class="relative w-full h-64 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full hidden lg:block"
       >
         <img
-          class="absolute object-bottom inset-0 w-full  object-contain top-24"
-          src="../assets/undraw_baby_ja7a.svg"
+          class="absolute inset-0 h-full w-full object-contain"
+          src="../assets/undraw_on_the_office_fbfs.svg"
           alt=""
         />
       </div>
