@@ -34,6 +34,7 @@
           </div>
           <div class="-mr-2 -my-2 md:hidden">
             <button
+              @click="toggleMobileNav"
               type="button"
               class="
                 bg-white
@@ -70,18 +71,14 @@
             </button>
           </div>
           <div
-            class="hidden md:flex-1 md:flex md:items-center md:justify-between"
+            class="md:flex-1 md:flex md:items-center md:justify-between"
+            v-show="!mobile"
           >
-            <nav
-              class="flex space-x-10"
-              x-data="Components.popoverGroup()"
-              x-init="init()"
-            >
+            <nav class="flex space-x-10">
               <div>
                 <button
+                  @click="toggleDropdown"
                   type="button"
-                  x-state:on="Item active"
-                  x-state:off="Item inactive"
                   class="
                     text-gray-500
                     group
@@ -126,7 +123,7 @@
                   leave-class="opacity-100 translate-y-0"
                   leave-to-class="opacity-0 -translate-y-1"
                   ><div
-                    v-if="open"
+                    v-if="dropdown"
                     class="
                       hidden
                       md:block
@@ -620,8 +617,7 @@
               <div @keydown.escape="onEscape">
                 <button
                   type="button"
-                  x-state:on="Item active"
-                  x-state:off="Item inactive"
+                  @click="toggleDropdown"
                   class="
                     text-gray-500
                     group
@@ -636,8 +632,6 @@
                     focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                   "
                   :class="{ 'text-gray-900': open, 'text-gray-500': !open }"
-                  @click="toggle"
-                  @mousedown="if (open) $event.preventDefault();"
                   aria-expanded="false"
                 >
                   <span>More</span>
@@ -668,7 +662,7 @@
                   leave-class="opacity-100 translate-y-0"
                   leave-to-class="opacity-0 -translate-y-1"
                   ><div
-                    v-if="open"
+                    v-if="dropdown"
                     x-description="'More' flyout menu, show/hide based on flyout menu state."
                     class="
                       hidden
@@ -680,7 +674,6 @@
                       transform
                       shadow-lg
                     "
-                    x-ref="panel"
                   >
                     <div class="absolute inset-0 flex">
                       <div class="bg-white w-1/2"></div>
@@ -1213,8 +1206,7 @@
         leave-class="opacity-100 scale-100"
         leave-to-class="opacity-0 scale-95"
         ><div
-          v-if="open"
-          x-description="Mobile menu, show/hide based on mobile menu state."
+          v-show="mobileNav"
           class="
             absolute
             z-30
@@ -1226,7 +1218,6 @@
             origin-top-right
             md:hidden
           "
-          x-ref="panel"
         >
           <div
             class="
@@ -1262,7 +1253,7 @@
                       focus:outline-none
                       focus:ring-2 focus:ring-inset focus:ring-indigo-500
                     "
-                    @click="toggle"
+                    @click="toggleMobileNav"
                   >
                     <span class="sr-only">Close menu</span>
                     <svg
@@ -1607,6 +1598,38 @@
 <script>
 export default {
   name: 'Header',
+  data() {
+    return {
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null,
+      dropdown: false,
+    };
+  },
+
+  methods: {
+    checkScreen() {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 750) {
+        this.mobile = true;
+        return;
+      }
+      this.mobile = false;
+      this.mobileNav = false;
+      return;
+    },
+    toggleMobileNav() {
+      this.mobileNav = !this.mobileNav;
+    },
+    toggleDropdown() {
+      this.dropdown = !this.dropdown;
+    },
+  },
+
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
+  },
 };
 </script>
 
