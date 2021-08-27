@@ -1,36 +1,27 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <Header />
-  <div class="about">
-    <div class="bg-white">
-      <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2
-            class="text-base font-semibold text-indigo-600 tracking-wide uppercase"
-          >
-            Pricing
-          </h2>
-          <p
-            class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
-          >
-            Take control of your team.
-          </p>
-          <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-            Start building for free, then add a site plan to go live. Account
-            plans unlock additional features.
-          </p>
-        </div>
-      </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-8">
+    <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+    <div class="max-w-3xl mx-auto">
+      <ChairFinder />
     </div>
   </div>
+
+  <Footer />
 </template>
+
 <script>
-// @ is an alias to /src
+import Footer from '../components/Footer.vue';
 import Header from '../components/Header.vue';
+import ChairFinder from '../components/ChairFinder.vue';
 
 export default {
-  name: 'Login',
+  name: 'About',
   components: {
     Header,
+    Footer,
+    ChairFinder,
   },
 };
 </script>

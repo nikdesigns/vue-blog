@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-top">
+  <div class="footer border border-top">
     <footer class="bg-white" aria-labelledby="footerHeading">
       <h2 id="footerHeading" class="sr-only">Footer</h2>
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -8,7 +8,13 @@
             <div class="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3
-                  class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                  class="
+                    text-sm
+                    font-semibold
+                    text-gray-400
+                    tracking-wider
+                    uppercase
+                  "
                 >
                   Solutions
                 </h3>
@@ -52,7 +58,13 @@
               </div>
               <div class="mt-12 md:mt-0">
                 <h3
-                  class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                  class="
+                    text-sm
+                    font-semibold
+                    text-gray-400
+                    tracking-wider
+                    uppercase
+                  "
                 >
                   Support
                 </h3>
@@ -98,7 +110,13 @@
             <div class="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3
-                  class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                  class="
+                    text-sm
+                    font-semibold
+                    text-gray-400
+                    tracking-wider
+                    uppercase
+                  "
                 >
                   Company
                 </h3>
@@ -151,7 +169,13 @@
               </div>
               <div class="mt-12 md:mt-0">
                 <h3
-                  class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+                  class="
+                    text-sm
+                    font-semibold
+                    text-gray-400
+                    tracking-wider
+                    uppercase
+                  "
                 >
                   Legal
                 </h3>
@@ -188,7 +212,13 @@
           </div>
           <div class="mt-8 xl:mt-0">
             <h3
-              class="text-sm font-semibold text-gray-400 tracking-wider uppercase"
+              class="
+                text-sm
+                font-semibold
+                text-gray-400
+                tracking-wider
+                uppercase
+              "
             >
               Subscribe to our newsletter
             </h3>
@@ -204,13 +234,44 @@
                 id="emailAddress"
                 autocomplete="email"
                 required=""
-                class="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
+                class="
+                  appearance-none
+                  min-w-0
+                  w-full
+                  bg-white
+                  border border-gray-300
+                  rounded-md
+                  shadow-sm
+                  py-2
+                  px-4
+                  text-base text-gray-900
+                  placeholder-gray-500
+                  focus:outline-none
+                  focus:ring-indigo-500
+                  focus:border-indigo-500
+                  focus:placeholder-gray-400
+                "
                 placeholder="Enter your email"
               />
               <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  class="w-full bg-indigo-600 flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  class="
+                    w-full
+                    bg-indigo-600
+                    flex
+                    items-center
+                    justify-center
+                    border border-transparent
+                    rounded-md
+                    py-2
+                    px-4
+                    text-base
+                    font-medium
+                    text-white
+                    hover:bg-indigo-700
+                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                  "
                 >
                   Subscribe
                 </button>
@@ -219,7 +280,14 @@
           </div>
         </div>
         <div
-          class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between"
+          class="
+            mt-8
+            border-t border-gray-200
+            pt-8
+            md:flex
+            md:items-center
+            md:justify-between
+          "
         >
           <div class="flex space-x-6 md:order-2">
             <a href="#" class="text-gray-400 hover:text-gray-500">
@@ -311,7 +379,7 @@
 
 <script>
 export default {
-  name: 'Footer',
+  name: "Footer",
 };
 </script>
 

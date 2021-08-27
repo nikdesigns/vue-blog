@@ -1,8 +1,17 @@
 <template>
-  <div class="" style="">
+  <div class="cta">
     <div class="bg-indigo-700">
       <div
-        class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8"
+        class="
+          max-w-2xl
+          mx-auto
+          text-center
+          py-16
+          px-4
+          sm:py-20
+          sm:px-6
+          lg:px-8
+        "
       >
         <h2 class="text-3xl font-light text-white sm:text-4xl">
           <span class="block">Boost your productivity.</span>
@@ -14,7 +23,23 @@
         </p>
         <a
           href="#"
-          class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
+          class="
+            mt-8
+            w-full
+            inline-flex
+            items-center
+            justify-center
+            px-5
+            py-3
+            border border-transparent
+            text-base
+            font-medium
+            rounded-md
+            text-indigo-600
+            bg-white
+            hover:bg-indigo-50
+            sm:w-auto
+          "
         >
           Sign up for free
         </a>
@@ -25,7 +50,7 @@
 
 <script>
 export default {
-  name: 'Cta',
+  name: "Cta",
 };
 </script>
 

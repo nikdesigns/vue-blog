@@ -1,11 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
+import PageNotFound from '../views/PageNotFound.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'PageNotFound',
+    component: PageNotFound,
+  },
+  {
+    path: '/faqs',
+    name: 'FAQ',
+    component: () => import(/* webpackChunkName: "login" */ '../views/FAQ.vue'),
   },
   {
     path: '/signup',

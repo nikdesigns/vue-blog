@@ -1,19 +1,32 @@
 <template>
-  <div class="pb-20">
+  <div class="feature pb-20">
     <div class="py-12 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center">
           <h2
-            class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+            class="
+              text-base text-indigo-600
+              font-semibold
+              tracking-wide
+              uppercase
+            "
           >
             Transactions
           </h2>
           <p
-            class="mt-2 text-3xl leading-8 font-light tracking-tight text-gray-900 sm:text-4xl"
+            class="
+              mt-2
+              text-3xl
+              leading-8
+              font-light
+              tracking-tight
+              text-gray-900
+              sm:text-4xl
+            "
           >
             A better way to send money
           </p>
-          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto ">
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
             voluptatum cupiditate veritatis in accusamus quisquam.
           </p>
@@ -21,12 +34,27 @@
 
         <div class="mt-10">
           <dl
-            class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+            class="
+              space-y-10
+              md:space-y-0
+              md:grid md:grid-cols-2
+              md:gap-x-8 md:gap-y-10
+            "
           >
             <div class="relative">
               <dt>
                 <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    h-12
+                    w-12
+                    rounded-md
+                    bg-indigo-500
+                    text-white
+                  "
                 >
                   <svg
                     class="h-6 w-6"
@@ -59,7 +87,17 @@
             <div class="relative">
               <dt>
                 <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    h-12
+                    w-12
+                    rounded-md
+                    bg-indigo-500
+                    text-white
+                  "
                 >
                   <svg
                     class="h-6 w-6"
@@ -92,7 +130,17 @@
             <div class="relative">
               <dt>
                 <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    h-12
+                    w-12
+                    rounded-md
+                    bg-indigo-500
+                    text-white
+                  "
                 >
                   <svg
                     class="h-6 w-6"
@@ -125,7 +173,17 @@
             <div class="relative">
               <dt>
                 <div
-                  class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="
+                    absolute
+                    flex
+                    items-center
+                    justify-center
+                    h-12
+                    w-12
+                    rounded-md
+                    bg-indigo-500
+                    text-white
+                  "
                 >
                   <svg
                     class="h-6 w-6"
@@ -163,7 +221,7 @@
 
 <script>
 export default {
-  name: 'Feature',
+  name: "Feature",
 };
 </script>
 

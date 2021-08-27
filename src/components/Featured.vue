@@ -1,9 +1,16 @@
 <template>
-  <div class="" style="">
-    <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+  <div class="featured">
+    <div class="md:pb-16 bg-gray-50 overflow-hidden lg:pb-16">
       <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <svg
-          class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
+          class="
+            hidden
+            lg:block
+            absolute
+            left-full
+            transform
+            -translate-x-1/2 -translate-y-1/4
+          "
           width="404"
           height="784"
           fill="none"
@@ -37,11 +44,24 @@
         </svg>
 
         <div
-          class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+          class="
+            relative
+            mt-12
+            lg:mt-24
+            lg:grid lg:grid-cols-2
+            lg:gap-8
+            lg:items-center
+          "
         >
           <div class="relative">
             <h3
-              class="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl"
+              class="
+                text-2xl
+                font-extrabold
+                text-gray-900
+                tracking-tight
+                sm:text-3xl
+              "
             >
               Transfer funds world-wide
             </h3>
@@ -56,7 +76,17 @@
               <div class="relative">
                 <dt>
                   <div
-                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                    class="
+                      absolute
+                      flex
+                      items-center
+                      justify-center
+                      h-12
+                      w-12
+                      rounded-md
+                      bg-indigo-500
+                      text-white
+                    "
                   >
                     <svg
                       class="h-6 w-6"
@@ -89,7 +119,17 @@
               <div class="relative">
                 <dt>
                   <div
-                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                    class="
+                      absolute
+                      flex
+                      items-center
+                      justify-center
+                      h-12
+                      w-12
+                      rounded-md
+                      bg-indigo-500
+                      text-white
+                    "
                   >
                     <svg
                       class="h-6 w-6"
@@ -122,7 +162,17 @@
               <div class="relative">
                 <dt>
                   <div
-                    class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                    class="
+                      absolute
+                      flex
+                      items-center
+                      justify-center
+                      h-12
+                      w-12
+                      rounded-md
+                      bg-indigo-500
+                      text-white
+                    "
                   >
                     <svg
                       class="h-6 w-6"
@@ -156,7 +206,14 @@
 
           <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
             <svg
-              class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+              class="
+                absolute
+                left-1/2
+                transform
+                -translate-x-1/2
+                translate-y-16
+                lg:hidden
+              "
               width="784"
               height="404"
               fill="none"
@@ -197,7 +254,14 @@
         </div>
 
         <svg
-          class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
+          class="
+            hidden
+            lg:block
+            absolute
+            right-full
+            transform
+            translate-x-1/2 translate-y-12
+          "
           width="404"
           height="784"
           fill="none"
@@ -236,7 +300,7 @@
 
 <script>
 export default {
-  name: 'Featured',
+  name: "Featured",
 };
 </script>
 
